@@ -92,6 +92,13 @@
             </Response>
             <Condition>response.body</Condition>
         </Flow>
+	<Flow name="flow1">
+            <Response>
+                <Step>
+                    <Name>ExtractVariables-6</Name>
+                </Step>
+            </Response>
+        </Flow>
        
 <Flow name="flow2">
           <Step>
