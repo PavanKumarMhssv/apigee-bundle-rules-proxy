@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="MyExtractVariables">
+    <DisplayName>ExtractVariables_1</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <QueryParam name="numbers">
+        <Pattern ignoreCase="true">{numArray}</Pattern>
+    </QueryParam>
+    <FormParam name="greeting">
+        <Pattern>hello {user}</Pattern>
+    </FormParam>
+  <Source clearPayload="false">request</Source>
+  <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+ </ExtractVariables>

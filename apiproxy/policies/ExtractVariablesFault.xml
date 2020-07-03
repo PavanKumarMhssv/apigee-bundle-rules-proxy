@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="ExtractVariablesFault">
+    <DisplayName>ExtractVariablesFault</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <QueryParam name="name"/>
+    <XMLPayload stopPayloadProcessing="false">
+        <Namespaces>
+            <Namespace prefix="apigee">http://www.apigee.com</Namespace>
+            <Namespace prefix="gmail">http://mail.google.com</Namespace>
+        </Namespaces>
+        <Variable name="name" type="boolean">
+            <XPath>/apigee:test/apigee:example</XPath>
+        </Variable>
+    </XMLPayload>
+ </ExtractVariables>
