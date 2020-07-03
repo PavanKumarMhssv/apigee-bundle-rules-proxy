@@ -45,6 +45,7 @@
             </Step>
             <Step>
                 <Name>AssignMessage.CopyRequest</Name>
+		 <Condition>{wackyvar.foo} and request.verb="POST" and request.header.contenttype="application/json" or {foovar} or {wackyvar.foo} and request.verb="POST" and request.header.contenttype="application/json" or {foovar} or {wackyvar.foo} and request.verb="POST" and request.header.contenttype="application/json" or {foovar} or {wackyvar.foo} and request.verb="POST" and request.header.contenttype="application/json" or {foovar}</Condition>
             </Step>
             <Step>
                 <FaultRules/>
