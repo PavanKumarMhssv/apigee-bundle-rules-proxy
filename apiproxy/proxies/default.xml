@@ -95,6 +95,9 @@
         <Flow name="flow1">
             <Condition/>
         </Flow>
+	<Flow name="flow2">
+            <Condition/>
+        </Flow>
        
 <Flow name="flow2">
           <Step>
