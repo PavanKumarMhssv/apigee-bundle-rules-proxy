@@ -19,6 +19,12 @@
         </Request>
         <Response/>
     </PreFlow>
+            <Flow name="flow1">
+            <Condition/>
+        </Flow>
+	<Flow name="flow2">
+            <Condition/>
+        </Flow>
     <Flows/>
     <DefaultFaultRule name="fault-handler">
         <Step>
