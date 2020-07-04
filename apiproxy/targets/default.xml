@@ -43,6 +43,6 @@
         </Step>
     </DefaultFaultRule>
     <HTTPTargetConnection>
-        <URL>http://api.foo.com/</URL>
+        <URL>enterprise.apigee.com</URL>
     </HTTPTargetConnection>
 </TargetEndpoint>
