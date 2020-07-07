@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <LookupCache async="false" continueOnError="false" enabled="true" name="Lookup-Cache-1">
-    <DisplayName>Lookup Cache 1</DisplayName>
+    <DisplayName>lookup</DisplayName>
     <Properties/>
     <CacheKey>
         <Prefix/>

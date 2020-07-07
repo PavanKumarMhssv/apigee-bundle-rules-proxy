@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <RegularExpressionProtection async="false" continueOnError="false" enabled="true" name="Regular-Expression-Protection-1">
-    <DisplayName>Regular Expression Protection 1</DisplayName>
+    <DisplayName>regEx</DisplayName>
     <Source>response</Source>
     <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
     <URIPath>
