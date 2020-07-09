@@ -73,7 +73,6 @@
             <Step>
                 <Name>publishPurchaseDetails</Name>
             </Step>
-		<Step/>
 				<Step>
         <Condition>foo != ""</Condition>
         <Name>JSON-Threat-Protection-1</Name>
@@ -124,7 +123,6 @@
                 <Condition>request.body!=""</Condition>
                 <Name>ExtractVariablesFormParam-1</Name>
             </Step>
-		<Step></Step>
         </Response>
     </PostFlow>
     <RouteRule name="foo">
