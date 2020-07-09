@@ -4,7 +4,7 @@
     <Properties/>
     <Allow count="5" countRef="request.header.allowed_quota"/>
     <Interval ref="request.header.quota_count">1</Interval>
-    <Distributed>false</Distributed>
+    <Distributed>true</Distributed>
     <Synchronous>false</Synchronous>
     <TimeUnit ref="request.header.quota_timeout">minute</TimeUnit>
     <StartTime>2016-3-31 00:00:00</StartTime>
