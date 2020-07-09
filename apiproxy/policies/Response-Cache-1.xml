@@ -14,5 +14,5 @@
     </ExpirySettings>
     <SkipCacheLookup/>
     <SkipCachePopulation/>
-    <ExcludeErrorResponse>false</ExcludeErrorResponse>
+    <ExcludeErrorResponse>true</ExcludeErrorResponse>
 </ResponseCache>
