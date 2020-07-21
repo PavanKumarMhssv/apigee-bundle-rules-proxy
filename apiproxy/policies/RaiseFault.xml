@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RaiseFault async="false" continueOnError="false" enabled="true" name="Raise-Fault-1">
+    <DisplayName>Raise Fault 1</DisplayName>
+    <FaultResponse>
+        <AssignVariable>
+          <Name/>
+          <Value/>
+        </AssignVariable>
+        <Add>
+            <Headers/>
+        </Add>
+        <Copy source="request">
+            <Headers/>
+            <StatusCode/>
+            <ReasonPhrase/>
+        </Copy>
+        <Remove>
+            <Headers/>
+        </Remove>
+        <Set>
+            <Headers/>
+            <Payload/>
+            <ReasonPhrase/>
+            <StatusCode/>
+        </Set>
+    </FaultResponse>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</RaiseFault>

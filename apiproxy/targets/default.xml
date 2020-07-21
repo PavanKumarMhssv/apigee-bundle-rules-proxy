@@ -8,6 +8,11 @@
             </Step>
             <Condition>(false AND fault.name = "FailedToResolveAPIKey")</Condition>
         </FaultRule>
+        <FaultRule name="generic_raisefault">
+			<Step>
+				<Name>RaiseFault</Name>
+			</Step>
+		</FaultRule>
     </FaultRules>
     <DefaultFaultRule name="default-fault">
         <Step>
@@ -44,5 +49,10 @@
     </DefaultFaultRule>
     <HTTPTargetConnection>
         <URL>enterprise.apigee.com</URL>
+          <Properties>
+      <Property name="allow.http10">false</Property>
+      <Property name="response.streaming.enabled">false</Property>
+      <Property name="request.streaming.enabled">false</Property>
+    </Properties>
     </HTTPTargetConnection>
 </TargetEndpoint>

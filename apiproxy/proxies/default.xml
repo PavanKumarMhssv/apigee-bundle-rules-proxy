@@ -13,6 +13,11 @@
                 <Name>ExtractVariablesFault</Name>
             </Step>
         </FaultRule>
+        <FaultRule name="generic_raisefault">
+			<Step>
+				<Name>Raise-Fault-1</Name>
+			</Step>
+		</FaultRule>
     </FaultRules>
     <DefaultFaultRule name="default-fault">
         <Step>
@@ -114,7 +119,16 @@
       </Flow>
 
 	   </Flows>
-
+  <PostClientFlow>
+    <Response>
+      <Step>
+        <Name>Message-Logging-1</Name>
+      </Step>
+      <Step>
+        <Name>Message-Logging-1</Name>
+      </Step>
+    </Response>
+  </PostClientFlow>
   
     <PostFlow name="PostFlow">
         <Request/>
@@ -144,6 +158,13 @@
     </RouteRule>
     <HTTPProxyConnection>
         <BasePath>/24solver</BasePath>
+        <Properties>
+      <Property name="allow.http10">true</Property>
+      <Property name="response.streaming.enabled">true</Property>
+      <Property name="request.streaming.enabled">true</Property>
+      <Property name="enable.method.override">true</Property>
+      <Property name="*.override.method">true</Property>
+    </Properties>
         <VirtualHost>default</VirtualHost>
         <VirtualHost>secure</VirtualHost>
     </HTTPProxyConnection>
