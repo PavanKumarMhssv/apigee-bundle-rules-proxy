@@ -21,7 +21,7 @@
             <Headers/>
             <Payload/>
             <ReasonPhrase/>
-            <StatusCode/>
+            <StatusCode>200</StatusCode>
         </Set>
     </FaultResponse>
     <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>

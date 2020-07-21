@@ -6,8 +6,12 @@
             <Step>
                 <Name>ExtractVariablesFault</Name>
             </Step>
+          <Step>
+            <Name>Raise-Fault-1</Name>
+          </Step>
             <Condition>(fault.name = "FailedToResolveAPIKey")</Condition>
         </FaultRule>
+
 	<FaultRule name="ExtractVariablesFault">
             <Step>
                 <Name>ExtractVariablesFault</Name>
@@ -91,6 +95,9 @@
           <Condition>foo != ""</Condition>
           <Name>ExtractVariables-6</Name>
       </Step>
+          <Step>
+            <Name>service-callout</Name>
+          </Step>
         </Request>
         <Response/>
     </PreFlow>
@@ -128,6 +135,19 @@
         <Name>Message-Logging-1</Name>
       </Step>
     </Response>
+  </PostClientFlow>
+
+  <PostClientFlow name="PostClientFlow">
+    <Request/>
+    <Response>
+      <Step>
+        <Name>Message-Logging-1</Name>
+      </Step>
+    </Response>
+    <FlowCallout>
+      <DisplayName>Auth-Flow-Callout</DisplayName>
+      <SharedFlowBundle>SharedFlow_Sample</SharedFlowBundle>
+    </FlowCallout>
   </PostClientFlow>
   
     <PostFlow name="PostFlow">
@@ -169,4 +189,20 @@
         <VirtualHost>secure</VirtualHost>
     </HTTPProxyConnection>
     <RouteRule name="noroute" />
+
+  <ProxyEndpoint name="default-1">
+    <Description/>
+    <FaultRule name="ExtractVariablesFault">
+      <Step>
+        <Name>ExtractVariablesFault</Name>
+        <Condition>request.content != ""</Condition>
+      </Step>
+      <Condition>(fault.name = "FailedToResolveAPIKey")</Condition>
+    </FaultRule>
+    <HTTPProxyConnection>
+      <BasePath>/24solver</BasePath>
+      <VirtualHost>default</VirtualHost>
+      <VirtualHost>secure</VirtualHost>
+    </HTTPProxyConnection>
+  </ProxyEndpoint>
 </ProxyEndpoint>

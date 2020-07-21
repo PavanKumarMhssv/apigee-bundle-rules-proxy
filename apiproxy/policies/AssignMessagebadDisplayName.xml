@@ -5,4 +5,8 @@
 	<Copy source="request">
 		<Payload>true</Payload>
 	</Copy>
+	<AssignVariable>
+		<Name>target.url</Name>
+		<Value>http://${AppServerRoot}/{AppServerSfx}</Value>
+	</AssignVariable>
 </AssignMessage>
