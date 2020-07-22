@@ -53,6 +53,14 @@
       <Property name="allow.http10">false</Property>
       <Property name="response.streaming.enabled">false</Property>
       <Property name="request.streaming.enabled">false</Property>
+            <Property name="io.timeout.millis">560000</Property>
+
     </Properties>
+      <LoadBalancer>
+        <Algorithm>RoundRobin</Algorithm>
+        <Server name="target1" />
+        <MaxFailures>5</MaxFailures>
+      </LoadBalancer>
+      <Path>/test</Path>
     </HTTPTargetConnection>
 </TargetEndpoint>

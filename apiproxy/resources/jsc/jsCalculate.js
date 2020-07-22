@@ -14,6 +14,23 @@
   limitations under the License.
 */
 
+var appServerRoot = context.getVariable("AppServerRoot");
+var appServerSfx = context.getVariable("AppServerSfx");
+context.setVariable("target.url", "http://" + appServerRoot + "/" + appServerSuffix);
+
+var myRequest = new Request("https://example.com","GET");
+var exchange = httpClient.send(myRequest);
+// Wait for the asynchronous GET request to finish
+exchange.waitForComplete();
+
+// Get and Process the response
+if (exchange.isSuccess()) {
+    var responseObj = exchange.getResponse().content.asJSON;
+    return responseObj.access_token;
+} else if (exchange.isError()) {
+    throw new Error(exchange.getError());
+}
+
 var inputs = context.getVariable("numArray");
 var nums = permutator(inputs);
 var ops = combinator(3, ['+', '-', '*', '/']);
